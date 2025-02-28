@@ -25,7 +25,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'python3 -m unittest discover tests/'
+                sh 'pytest tests/'
             }
         }
 
@@ -58,13 +58,6 @@ pipeline {
                 }
             }
         }
-	stage('Open App in Browser') {
-    steps {
-       sh 'export DISPLAY=:0 && nohup firefox http://localhost:8501 &'
-    }
-}
-
-
     }
 }
 
