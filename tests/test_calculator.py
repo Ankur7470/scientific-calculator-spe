@@ -1,5 +1,5 @@
 import pytest
-from app import square_root, factorial, natural_log, power
+from calculator import square_root, factorial, natural_log, power
 
 def test_square_root():
     assert square_root(4) == 2
