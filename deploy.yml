@@ -24,7 +24,3 @@
 
     - name: Run Scientific Calculator container
       shell: docker run -it -d --name scientific-calculator -p 8501:8501 ankur2k19/scientific-calculator
-
-    - name: Open Streamlit app in browser
-      shell: xdg-open http://localhost:8501
-      when: ansible_facts['os_family'] == "Debian"
