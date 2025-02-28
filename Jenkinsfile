@@ -60,7 +60,7 @@ pipeline {
         }
 	stage('Open App in Browser') {
     steps {
-        sh 'nohup xdg-open http://localhost:8501 &'
+        sh 'nohup google-chrome-stable http://localhost:8501 & || nohup firefox http://localhost:8501 &'
     }
 }
 
