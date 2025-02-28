@@ -58,6 +58,13 @@ pipeline {
                 }
             }
         }
+	stage('Open App in Browser') {
+    steps {
+        sh 'nohup xdg-open http://localhost:8501 &'
+    }
+}
+
+
     }
 }
 
