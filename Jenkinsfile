@@ -60,7 +60,7 @@ pipeline {
         }
 	stage('Open App in Browser') {
     steps {
-        sh 'nohup firefox http://localhost:8501 &'
+       sh 'export DISPLAY=:0 && nohup firefox http://localhost:8501 &'
     }
 }
 
