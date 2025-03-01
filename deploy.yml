@@ -1,5 +1,5 @@
 ---
-- name: Pull Docker Image from Docker Hub
+- name: Deploy Scientific Calculator
   hosts: localhost
   remote_user: ankur
   become: false

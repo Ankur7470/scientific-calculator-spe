@@ -1,8 +1,8 @@
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))  # Add parent directory
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))  
 import pytest
-from calculator import square_root, factorial, natural_log, power
+from calculator_functions import square_root, factorial, natural_log, power
 
 def test_square_root():
     assert square_root(4) == 2
@@ -19,4 +19,5 @@ def test_natural_log():
 def test_power():
     assert power(2, 3) == 8
     assert power(5, 0) == 1
+
 

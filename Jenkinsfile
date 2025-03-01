@@ -7,7 +7,6 @@ pipeline {
         DOCKER_IMAGE_NAME = 'scientific-calculator'
         GITHUB_REPO_URL = 'https://github.com/Ankur7470/scientific-calculator-spe.git'
     }
-
     stages {
         stage('Checkout') {
             steps {
@@ -16,19 +15,16 @@ pipeline {
                 }
             }
         }
-
         stage('Install Dependencies') {
             steps {
                 sh 'pip install -r requirements.txt'
             }
         }
-
         stage('Run Tests') {
             steps {
                 sh 'python3 -m pytest tests/'
             }
         }
-
         stage('Build Docker Image') {
             steps {
                 script {
@@ -36,7 +32,6 @@ pipeline {
                 }
             }
         }
-
         stage('Push Docker Image') {
             steps {
                 script {
@@ -47,7 +42,6 @@ pipeline {
                 }
             }
         }
-
         stage('Run Ansible Playbook') {
             steps {
                 script {
