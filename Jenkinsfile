@@ -15,11 +15,11 @@ pipeline {
                 }
             }
         }
-        stage('Install Dependencies') {
-            steps {
-                sh 'pip install -r requirements.txt'
-            }
-        }
+        // stage('Install Dependencies') {
+        //     steps {
+        //         sh 'pip install -r requirements.txt'
+        //     }
+        // }
         stage('Run Tests') {
             steps {
                 sh 'python3 -m pytest tests/'
